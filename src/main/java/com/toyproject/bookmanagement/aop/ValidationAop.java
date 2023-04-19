@@ -27,6 +27,7 @@ public class ValidationAop {
 		BindingResult bindingResult = null;
 		
 		for(Object arg : args) {
+			
 			if(arg.getClass() == BeanPropertyBindingResult.class) {
 				bindingResult = (BeanPropertyBindingResult) arg;
 			}
@@ -34,6 +35,7 @@ public class ValidationAop {
 		
 		if(bindingResult.hasErrors()) {
 			Map<String, String> errorMap = new HashMap<>();
+			
 			bindingResult.getFieldErrors().forEach(error -> {
 				errorMap.put(error.getField(), error.getDefaultMessage());
 			});

@@ -5,7 +5,7 @@ import java.util.Map;
 import lombok.Getter;
 
 @Getter
-public class CustomException extends RuntimeException{
+public class CustomException extends RuntimeException{ //프로그램 실행중 에러발생시 끊어줌
 	
 	private Map<String, String> errorMap;
 	
