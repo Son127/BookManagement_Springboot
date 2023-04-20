@@ -10,4 +10,4 @@ mybatis:
     - /mappers/*.xml 
 
 jwt:
-  secret: Nlt0Uv4pRI4OWnXbfbMeFKKwiYiJAtltLtKzt4vuA7wu6bHUQcBzwGpl69kYAH2a
+  secretKey: Nlt0Uv4pRI4OWnXbfbMeFKKwiYiJAtltLtKzt4vuA7wu6bHUQcBzwGpl69kYAH2a

@@ -23,13 +23,6 @@
 		<result property="roleName" column="role_name"/>
 	</resultMap>
 	
-	<insert id="saveUser"
-		parameterType="com.toyproject.bookmanagement.entity.User"
-	 >
-		insert into user_tb
-		values(0,#{email},#{password},#{name},#{provider})
-	</insert>
-	
 	<select id="findUserByEmail" resultMap="userMap">
 		select
 				ut.user_id,
@@ -52,4 +45,30 @@
 			
 	</select>
 	
+	<insert id="saveUser"
+		parameterType="com.toyproject.bookmanagement.entity.User"
+		useGeneratedKeys="true"
+		keyProperty="userId">
+		insert into user_tb
+		values(0,#{email},#{password},#{name},#{provider})
+	</insert>
+	
+	<insert id="saveAuthority" parameterType="com.toyproject.bookmanagement.entity.Authority">
+		insert into authority_tb
+		values(0,#{userId},#{roleId})
+	</insert>
+	
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

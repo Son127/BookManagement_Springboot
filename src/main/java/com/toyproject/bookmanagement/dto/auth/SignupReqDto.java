@@ -1,6 +1,7 @@
 package com.toyproject.bookmanagement.dto.auth;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -13,6 +14,7 @@ import lombok.Data;
 public class SignupReqDto {
 	//email은 validation이 있음
 	@Email
+	@NotBlank
 	private String email;
 	
 	// 비밀번호 정규식.
