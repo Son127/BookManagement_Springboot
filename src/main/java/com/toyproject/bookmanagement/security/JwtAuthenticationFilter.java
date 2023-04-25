@@ -12,8 +12,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
-import com.toyproject.bookmanagement.security.jwt.JwtTokenProvider;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

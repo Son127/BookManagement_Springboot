@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.toyproject.bookmanagement.dto.book.CategoryRespDto;
 import com.toyproject.bookmanagement.dto.book.SearchBookReqDto;
 import com.toyproject.bookmanagement.service.BookService;
 
@@ -19,5 +20,10 @@ public class BookController { // c -> rep -> s
 	public ResponseEntity<?> searchBooks(SearchBookReqDto searchBookReqDto) {
 		
 		return ResponseEntity.ok().body(bookService.searchBookRespDtos(searchBookReqDto));
+	}
+	
+	@GetMapping("/categories")
+	public ResponseEntity<?> categories(){
+		return ResponseEntity.ok().body(bookService.getCategories());
 	}
 }

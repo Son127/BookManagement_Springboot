@@ -17,7 +17,7 @@ import com.toyproject.bookmanagement.entity.User;
 import com.toyproject.bookmanagement.exception.CustomException;
 import com.toyproject.bookmanagement.exception.ErrorMap;
 import com.toyproject.bookmanagement.repository.UserRepository;
-import com.toyproject.bookmanagement.security.jwt.JwtTokenProvider;
+import com.toyproject.bookmanagement.security.JwtTokenProvider;
 
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;

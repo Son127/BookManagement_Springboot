@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Publisher {
-	private int puvlisherId;
+	private int publisherId;
 	private String publisherName;
 }

@@ -1,4 +1,4 @@
-package com.toyproject.bookmanagement.security.jwt;
+package com.toyproject.bookmanagement.security;
 
 import java.security.Key;
 import java.util.ArrayList;
@@ -76,7 +76,7 @@ public class JwtTokenProvider {
 				.parseClaimsJws(token);
 			
 			return true;
-
+			
 		}catch (SecurityException | MalformedJwtException e) {
 			log.info("Incalid Jwt token", e);
 		}catch(ExpiredJwtException e) {

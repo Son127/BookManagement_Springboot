@@ -11,7 +11,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.toyproject.bookmanagement.security.JwtAuthenticationEntryPoint;
 import com.toyproject.bookmanagement.security.JwtAuthenticationFilter;
-import com.toyproject.bookmanagement.security.jwt.JwtTokenProvider;
+import com.toyproject.bookmanagement.security.JwtTokenProvider;
 
 import lombok.RequiredArgsConstructor;
 
@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+		http.cors();
 		http.csrf().disable();
 		http.httpBasic().disable();
 		http.formLogin().disable();
