@@ -25,18 +25,20 @@ public class BookService {
 		
 		int index = (searchBookReqDto.getPage() -1) * 20;
 		Map<String, Object> map = new HashMap<>();
+		map.put("index", index);
 		map.put("categoryIds", searchBookReqDto.getCategoryIds());
-		
+		map.put("searchValue", searchBookReqDto.getSearchValue());
 		bookRepository.searchBooks(map).forEach(book -> {
 			list.add(book.toDto());
 		});
+		
+		System.out.println(searchBookReqDto.getSearchValue());
 		
 		int totalCount = bookRepository.getTotalCount(map);
 		
 		Map<String, Object> responseMap = new HashMap<>();
 		responseMap.put("totalCount", totalCount);
 		responseMap.put("bookList", list);
-		
 		return responseMap;
 	}
 	

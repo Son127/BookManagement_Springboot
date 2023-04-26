@@ -52,7 +52,18 @@
 	    left outer join publisher_tb pt on(pt.publisher_id = bt.publisher_id)
 	    left outer join category_tb ct on(ct.category_id = bt.category_id)
 	where
-		ct.category_id in ()
+		1 = 1
+		<if test="categoryIds != null">
+			and bt.category_id in (
+				<foreach item="categoryId" collection="categoryIds" separator="">
+					#{categoryId}
+				</foreach>
+			)
+		</if>
+		<if test='searchValue != ""'>
+				and bt.book_name like concat("%",#{searchValue},"%")
+		</if>
+
 	order by
 		bt.book_id 
 	limit #{index}, 20; 
@@ -67,6 +78,18 @@
 			left outer join author_tb at on (at.author_id = bt.author_id)
 			left outer join publisher_tb pt on(pt.publisher_id = bt.publisher_id)
 			left outer join category_tb ct on(ct.category_id = bt.category_id)
+		where
+			1 = 1
+			<if test="categoryIds != null">
+				and bt.category_id in (
+					<foreach item="categoryId" collection="categoryIds" separator="">
+						#{categoryId}
+					</foreach>
+				)
+			</if>
+			<if test='searchValue != ""'>
+				and bt.book_name like concat("%",#{searchValue},"%")
+			</if>
 	</select>
 	
 	<select id="getCategories" resultMap="CategoryMap">
