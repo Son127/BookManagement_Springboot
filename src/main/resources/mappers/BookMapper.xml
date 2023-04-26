@@ -139,7 +139,7 @@
 		where
 			book_id = #{bookId}
 	</select>
-	<select id="getLikeStatus" parameterType="hashMap" parameterMap="Integer">
+	<select id="getLikeStatus" parameterType="hashMap" resultType="Integer">
 		select
 			count(*)
 		from
