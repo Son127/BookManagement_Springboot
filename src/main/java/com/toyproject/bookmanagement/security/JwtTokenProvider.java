@@ -78,13 +78,13 @@ public class JwtTokenProvider {
 			return true;
 			
 		}catch (SecurityException | MalformedJwtException e) {
-			log.info("Incalid Jwt token", e);
+//			log.info("Incalid Jwt token", e);
 		}catch(ExpiredJwtException e) {
-			log.info("Expired Jwt token", e);
+//			log.info("Expired Jwt token", e);
 		}catch(UnsupportedJwtException e) {
-			log.info("Unsupported Jwt token", e);
+//			log.info("Unsupported Jwt token", e);
 		}catch(IllegalArgumentException e) {
-			log.info("IllegalArgument jWt token", e);
+//			log.info("IllegalArgument jWt token", e);
 		}catch (Exception e) {
 			log.info("Jwt token error", e);
 		}
