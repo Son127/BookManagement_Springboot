@@ -1,0 +1,59 @@
+[33mcommit 82057214c87dbbe0e0b68f68b75ab1eca8177aac[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Wed Apr 26 17:59:36 2023 +0900
+
+    db
+
+[33mcommit d5c3573be782de83392f0869fc31ca18d9f20274[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Wed Apr 26 17:49:17 2023 +0900
+
+    검색 구현 ,북카드 클릭시 페이지 이동 구현 , 추천 구현중
+
+[33mcommit 106356bc612cf369285dd25868e6e7228c8655fd[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Wed Apr 26 10:32:33 2023 +0900
+
+    카테고리 체크 시 목록표현 구현, 검색 구현 중
+
+[33mcommit dc1668719dfbc3167b2cc0190526239a6264731a[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Tue Apr 25 17:52:03 2023 +0900
+
+    카테고리 불러오기 구현
+
+[33mcommit 75a92b619765c124fc9a0865ea89a4b90e3aa816[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Tue Apr 25 10:38:43 2023 +0900
+
+     JwtAuthentication필터생성 및 포인트생성.
+
+[33mcommit b29afef01c5df880fcfbb36cdad45b69744aab15[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Mon Apr 24 18:02:34 2023 +0900
+
+    도서목록 join
+
+[33mcommit f4ec330b3e1aeeb1e367a761fbe5174e8e25b90a[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Fri Apr 21 17:50:39 2023 +0900
+
+    04-21 로그인 구현-> 페이지이동
+
+[33mcommit 73f8bd1257eed21c00a49d8cab46c91dee4369af[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Thu Apr 20 18:03:28 2023 +0900
+
+    04 -20 로그인, JWT토큰 인증
+
+[33mcommit 6c1533fea88c2abee221e9b1e6e574b70cc61815[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Wed Apr 19 18:05:30 2023 +0900
+
+    04-19 회원가입시 이메일 검사
+
+[33mcommit cf468551eac77e76ba7022c5141a6d498ea3d04c[m
+Author: DESKTOP-NUOPUIF\ITPS <a0105167504@gmail.com>
+Date:   Tue Apr 18 17:49:32 2023 +0900
+
+    first commit
