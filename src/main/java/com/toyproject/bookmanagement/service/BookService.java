@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.toyproject.bookmanagement.dto.book.CategoryRespDto;
@@ -13,8 +12,6 @@ import com.toyproject.bookmanagement.dto.book.GetBookRespDto;
 import com.toyproject.bookmanagement.dto.book.RentalListRespDto;
 import com.toyproject.bookmanagement.dto.book.SearchBookReqDto;
 import com.toyproject.bookmanagement.dto.book.SearchBookRespDto;
-import com.toyproject.bookmanagement.entity.RentalList;
-import com.toyproject.bookmanagement.entity.User;
 import com.toyproject.bookmanagement.repository.BookRepository;
 import com.toyproject.bookmanagement.repository.UserRepository;
 
@@ -100,6 +97,22 @@ public class BookService {
 		});
 		
 		return list;
+	}
+
+	public int rantalBook(int bookListId, int userId) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("bookListId", bookListId);
+		map.put("userId", userId);
+		
+		return bookRepository.rentalBook(map);
+	}
+	
+	public int returnBook(int bookListId, int userId) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("bookListId", bookListId);
+		map.put("userId", userId);
+		
+		return bookRepository.returnBook(map);
 	}
 	
 	

@@ -18,6 +18,7 @@ public class RentalList {
 		return RentalListRespDto.builder()
 				.bookListId(bookListId)
 				.bookName(bookName)
+				.userId(userId)
 				.rentalStatus(userId == 0) //false일 경우 렌탈 불가능
 				.build();
 	}
