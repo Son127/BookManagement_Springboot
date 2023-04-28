@@ -59,7 +59,7 @@
    
    <select id="searchBooks" parameterType="hashMap" resultMap="BookMap">
       select
-         bt.book_id,
+          bt.book_id,
           bt.book_name,
           bt.author_id,
           bt.publisher_id,
@@ -186,5 +186,10 @@
    			book_list_id = #{bookListId}
    		and user_id = #{userId}
    </delete>
+   
+	<insert id="registeBookList"  parameterType="Integer">
+		insert into book_list_tb
+		values (0,#{bookId}, now())
+	</insert>   
 </mapper>
 
